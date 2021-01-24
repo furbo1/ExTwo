@@ -49,12 +49,20 @@ namespace ExTwo
            { 
                string input = Console.ReadLine();
                string word = input;
-                input = 1 +"." + input + " ";
+               if(!String.IsNullOrWhiteSpace(input))
+               {
+                     input = 1 +"." + input + " ";
               for(int i = 2; i < 11; i++)
               {
                  input +=  i + "." + word + " " ;
               }
               Console.WriteLine(input );
+               } else 
+               {
+                   Console.WriteLine("Please enter a word");
+               
+               }
+              
                
            }
 
